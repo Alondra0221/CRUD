@@ -1,0 +1,17 @@
+<body class="bg-light text-dark">
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand">Client-Server</a>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<h1 class="p-5">Edit Article</h1>    
+</body>
+
+
+<%= render "form", article: @article %>
+
+<a href="/articles/" type="button" class="btn btn-dark position-absolute bottom-0 end-0">Go back</a>  

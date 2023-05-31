@@ -1,0 +1,31 @@
+
+<div class="px-5">
+
+<%= form_with model: article do |form|%>
+    <div>
+        <div class="mb-3 form-label"><%= form.label :title, class:"col-form-label"%> <br></div>
+        <div class="mb-3"><%= form.text_field :title, class:"form-control"%> <br></div>
+        <% article.errors.full_messages_for(:title).each do|message|%>
+        <div>
+            <%= message%>
+        </div>
+    <%end%>
+    </div>
+
+    <div>
+        <div class="mb-3 form-label"><%= form.label :body, class:"col-form-label"%> <br></div>
+        <div class="mb-3"><%= form.text_field :body, class:"form-control"%> <br></div>
+        
+        <% article.errors.full_messages_for(:body).each do|message|%>
+    <div>
+        <%= message%>
+    </div>
+    <% end%>
+    </div>
+
+    <div class=""> 
+        <%= form.submit%> <br>
+    </div>
+
+<%end%>
+</div>
